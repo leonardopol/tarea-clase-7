@@ -10,8 +10,10 @@ const $form = document.querySelector('#carta-a-santa');
 const ciudad = $form.ciudad.value;
 
 function validarCiudad(ciudad){
-    if(ciudad === '') {
+    if(ciudad.length === 0) {
         'El campo no puede estar vacio';
     }
 }
+
+validarCiudad(ciudad);
 
