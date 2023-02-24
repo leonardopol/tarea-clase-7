@@ -10,4 +10,17 @@ function probarValidarCiudad() {
     );
 }
 
+function probarValidarRegalo(){
+    console.assert(
+        validarDescripcionRegalo('') === 'El campo no puede estar vacio',
+        'Validar regalo no validó que el campo descripcion regalo no este vacío'
+    );
+
+    console.assert(
+        validarDescripcionRegalo('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') === 'El campo debe tener menos de 100 caracteres',
+        'El campo debe tener menos de 100 caracteres'
+    );
+}
+
 probarValidarCiudad();
+probarValidarRegalo();

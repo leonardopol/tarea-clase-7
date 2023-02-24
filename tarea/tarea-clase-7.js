@@ -23,7 +23,7 @@ function validarDescripcionRegalo(descripcionRegalo){
         return 'El campo no puede estar vacio';
     }
     if(descripcionRegalo.length >=100){
-        return 'El campo debe tener menos de 100 caracteres'
+        return 'El campo debe tener menos de 100 caracteres';
     }
     return '';
 }
