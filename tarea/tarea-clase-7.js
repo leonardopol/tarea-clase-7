@@ -13,7 +13,7 @@ const descripcionRegalo = $form['descripcion-regalo'].value;
 
 function validarCiudad(ciudad){
     if(ciudad.length === 0) {
-        return 'El campo no puede estar vacio';
+        return 'Este campo no puede estar vacio';
     }
     return '';
 }
