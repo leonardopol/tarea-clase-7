@@ -20,6 +20,11 @@ function probarValidarRegalo(){
         validarDescripcionRegalo('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') === 'El campo debe tener menos de 100 caracteres',
         'El campo debe tener menos de 100 caracteres'
     );
+
+    console.assert(
+        validarDescripcionRegalo('regalo') === '',
+        'La funcion validar regalo no funciono con una descripcion valida'
+    );
 }
 
 probarValidarCiudad();
