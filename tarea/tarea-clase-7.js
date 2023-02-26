@@ -6,11 +6,11 @@
 *
 * */
 
-const $form = document.querySelector('#carta-a-santa');
-const ciudad = $form.ciudad.value;
+//const $form = document.querySelector('#carta-a-santa');
+//const ciudad = $form.ciudad.value;
 
-const descripcionRegalo = $form['descripcion-regalo'].value;
-
+//const descripcionRegalo = $form['descripcion-regalo'].value;
+/*
 function validarCiudad(ciudad){
     if(ciudad.length === 0) {
         return 'Este campo no puede estar vacio';
@@ -22,6 +22,9 @@ function validarDescripcionRegalo(descripcionRegalo){
     if(descripcionRegalo.length === 0){
         return 'El campo no puede estar vacio';
     }
+    if(!/^[a-z0-9]+$/i.test(descripcionRegalo)){
+        return 'El campo descripcion solo puede tener numeros y letras';
+    }
     if(descripcionRegalo.length >=100){
         return 'El campo debe tener menos de 100 caracteres';
     }
@@ -30,4 +33,4 @@ function validarDescripcionRegalo(descripcionRegalo){
 
 validarCiudad(ciudad);
 validarDescripcionRegalo(descripcionRegalo);
-
+*/

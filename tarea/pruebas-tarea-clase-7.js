@@ -1,3 +1,4 @@
+/*
 function probarValidarCiudad() {
     console.assert(
         validarCiudad('Buenos Aires') === '',
@@ -25,7 +26,13 @@ function probarValidarRegalo(){
         validarDescripcionRegalo('regalo') === '',
         'La funcion validar regalo no funciono con una descripcion valida'
     );
+
+    console.assert(
+        validarDescripcionRegalo('.,.,.,.,') === 'El campo descripcion solo puede tener numeros y letras',
+        'La funcion validar descripcion regalo no valido que fuera solo numeros y letras'
+    )
 }
 
 probarValidarCiudad();
 probarValidarRegalo();
+*/
