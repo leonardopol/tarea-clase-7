@@ -87,9 +87,6 @@ function validarDescripcionRegalo(descripcionRegalo){
         }
     });
 
-    const $form = document.querySelector('#carta-a-santa');
-    $form.onsubmit = validarFormulario;
-
     /*
     Manera estatica de hacerlo uno por uno
 
@@ -116,5 +113,5 @@ function validarDescripcionRegalo(descripcionRegalo){
     }*/
  }
 
- //const $form = document.querySelector('#carta-a-santa');
- //$form.onsubmit = validarFormulario;
+ const $form = document.querySelector('#carta-a-santa');
+ $form.onsubmit = validarFormulario;
