@@ -66,7 +66,7 @@ function validarDescripcionRegalo(descripcionRegalo){
 
     console.log(errores);
     eliminarErroresAnteriores();
-    manejarErrores(errores);
+    console.log(manejarErrores(errores));
 
     event.preventDefault();
  }
@@ -84,12 +84,14 @@ function validarDescripcionRegalo(descripcionRegalo){
     //tomamos las llaves del objeto
     const keys = Object.keys(errores);
     const $errores = document.querySelector('#errores');
+    let cantidadErrores = 0;
     //recorremos con el forEach
     keys.forEach(function(key){
         //toma el error en la posicion 0 y asi susecivamente
         const error = errores[key];
         //si hay error (true) pone el marco rojo del css cambiando el className si es falso lo pone en blanco ''
         if(error){
+            cantidadErrores ++;
             $form[key].className = "error";
             
             const $error = document.createElement('li');
@@ -97,7 +99,6 @@ function validarDescripcionRegalo(descripcionRegalo){
             $errores.appendChild($error);
 
         } else {
-            //tarea borrar el campo adecuado
             
                 $form[key].className = "";
         }
@@ -127,6 +128,8 @@ function validarDescripcionRegalo(descripcionRegalo){
     } else {
         $form['descripcion-regalo'].className = '';
     }*/
+
+    return cantidadErrores;
  }
 
  const $form = document.querySelector('#carta-a-santa');
