@@ -35,7 +35,7 @@ function validarDescripcionRegalo(descripcionRegalo){
     if(descripcionRegalo.length === 0){
         return 'El campo no puede estar vacio';
     }
-    if(!/^[a-z0-9]+$/i.test(descripcionRegalo)){
+    if(!/^[a-z 0-9]+$/i.test(descripcionRegalo)){
         return 'El campo descripcion solo puede tener numeros y letras';
     }
     if(descripcionRegalo.length >=100){
