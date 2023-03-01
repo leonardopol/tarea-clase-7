@@ -65,25 +65,41 @@ function validarDescripcionRegalo(descripcionRegalo){
     };
 
     console.log(errores);
-
+    eliminarErroresAnteriores();
     manejarErrores(errores);
 
     event.preventDefault();
  }
+
+ function eliminarErroresAnteriores(){
+    const $capturarErrores = document.querySelectorAll('#errores li');
+    for (let i = 0; i < $capturarErrores.length; i++) {
+    $capturarErrores[i].remove();
+  }
+ }
+
 //Manera dinamica automatico
  function manejarErrores(errores){
 
     //tomamos las llaves del objeto
     const keys = Object.keys(errores);
-    //y las recorremos con el forEach
+    const $errores = document.querySelector('#errores');
+    //recorremos con el forEach
     keys.forEach(function(key){
         //toma el error en la posicion 0 y asi susecivamente
         const error = errores[key];
         //si hay error (true) pone el marco rojo del css cambiando el className si es falso lo pone en blanco ''
         if(error){
             $form[key].className = "error";
+            
+            const $error = document.createElement('li');
+            $error.innerText = error;
+            $errores.appendChild($error);
+
         } else {
-            $form[key].className = "";
+            //tarea borrar el campo adecuado
+            
+                $form[key].className = "";
         }
     });
 
