@@ -66,7 +66,12 @@ function validarDescripcionRegalo(descripcionRegalo){
 
     console.log(errores);
     eliminarErroresAnteriores();
-    console.log(manejarErrores(errores));
+    const esExito = manejarErrores(errores) === 0;
+
+    if(esExito){
+        $form.className = 'oculto';
+        document.querySelector('#exito').className = '';
+    }
 
     event.preventDefault();
  }
