@@ -54,11 +54,13 @@ function validarDescripcionRegalo(descripcionRegalo){
 
     console.log(errores);
     eliminarErroresAnteriores();
+
     const esExito = manejarErrores(errores) === 0;
 
     if(esExito){
         $form.className = 'oculto';
         document.querySelector('#exito').className = '';
+        setTimeout(redireccion,5000);
     }
 
     event.preventDefault();
@@ -69,6 +71,11 @@ function validarDescripcionRegalo(descripcionRegalo){
     for (let i = 0; i < $capturarErrores.length; i++) {
     $capturarErrores[i].remove();
   }
+ }
+
+ function redireccion(){
+    console.log("redireccionando");
+    window.location.href = "file:///C:/Users/sistema/Downloads/r-argentinaPrograma/GitHub/clase-7/tarea-clase-7/wishlist.html";
  }
 
  function manejarErrores(errores){
@@ -101,3 +108,4 @@ function validarDescripcionRegalo(descripcionRegalo){
 
  const $form = document.querySelector('#carta-a-santa');
  $form.onsubmit = validarFormulario;
+ 
